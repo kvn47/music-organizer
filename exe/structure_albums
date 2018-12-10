@@ -1,0 +1,7 @@
+#!/usr/bin/env ruby
+
+$LOAD_PATH << File.expand_path('../lib', __dir__)
+require 'music_organizer'
+
+path = File.expand_path(ARGV[0])
+MusicOrganizer.structure_albums(path)
