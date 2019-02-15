@@ -4,4 +4,15 @@ $LOAD_PATH << File.expand_path('../lib', __dir__)
 require 'music_organizer'
 
 path = File.expand_path(ARGV[0])
-MusicOrganizer.structure_albums(path)
+result = MusicOrganizer.organize_albums(path)
+
+case result
+when :done
+  puts '[SUCCESS] Done!'
+when :path_not_found
+  puts '[ERROR] Path not found!'
+when :albums_not_found
+  puts '[ERROR] Albums not found!'
+else
+  result.each(&method(:puts))
+end

@@ -3,13 +3,13 @@ RSpec.describe MusicOrganizer do
     expect(MusicOrganizer::VERSION).not_to be nil
   end
 
-  describe "#structure_albums" do
-    subject(:result) { described_class.structure_albums(path) }
+  describe "#organize_albums" do
+    subject(:result) { described_class.organize_albums(path) }
 
-    let(:path) { "" }
+    let(:path) { "/Volumes/S32/MUSIC/Antonio Vivaldi - Concertos" }
 
     it "organizes music files" do
-      expect(result).to be_truthy
+      expect(result).to eq(:done)
     end
   end
 end

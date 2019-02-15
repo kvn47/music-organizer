@@ -40,7 +40,7 @@ Gem::Specification.new do |spec|
   spec.add_development_dependency 'rake', '~> 10.0'
   spec.add_development_dependency 'rspec', '~> 3.0'
 
-  spec.add_runtime_dependency 'rubycue', '~> 0.1.0'
+  spec.add_runtime_dependency 'rubycue', '~> 0.2.0'
   spec.add_runtime_dependency 'taglib-ruby', '~> 0.7.1'
 
   spec.requirements << 'taglib (libtag1-dev in Debian/Ubuntu, taglib-devel in Fedora/RHEL)'
